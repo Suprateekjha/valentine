@@ -1,0 +1,214 @@
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ========== SCREENS ========== */
+.screen {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.96);
+}
+
+.screen.active {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.7s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ========== BACKGROUND ========== */
+.loading-bg {
+  background: url("loading-bg.png") center/cover no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle,
+    rgba(0,0,0,0.3),
+    rgba(0,0,0,0.65)
+  );
+  pointer-events: none;
+}
+
+/* ========== LOADING PAGE ========== */
+.loading-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  transform: scale(1.15);
+}
+
+#heart {
+  font-size: 96px;
+  cursor: pointer;
+  user-select: none;
+  animation: pulse 1.4s infinite;
+  text-shadow: 0 0 30px rgba(255,80,100,1);
+}
+
+@keyframes pulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+#quote {
+  margin-top: 10px;
+  color: white;
+  font-size: 18px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+}
+
+.progress-bar {
+  width: 320px;
+  height: 14px;
+  margin-top: 14px;
+  background: rgba(255,255,255,0.25);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+#progress {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg,#ff4d6d,#ff8fa3);
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+/* ========== PROPOSAL PAGE ========== */
+.proposal-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 30px;
+}
+.proposal-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.proposal-image-card {
+  width: 900px;          /* 🔥 BIG */
+  height: 700px;
+  background: white;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+}
+
+.proposal-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.proposal-text-card {
+  width: 360px;          /* 🔥 smaller */
+  background: rgba(255,255,255,0.96);
+  padding: 30px;
+  border-radius: 26px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+}
+.fixed-line {
+  font-size: 22px;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.dynamic-line {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 22px;
+  transition: opacity 0.3s ease;
+}
+
+
+.fixed-line {
+  font-size: 26px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.dynamic-line {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 25px;
+  transition: opacity 0.3s ease;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#yesBtn {
+  background: #ff0033;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+#noBtn {
+  background: #ccc;
+  padding: 10px 22px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  position: relative;   /* ✅ normal at start */
+}
+
+
+/* ========== BILL PAGE ========== */
+.card {
+  position: relative;
+  z-index: 2;
+  background: white;
+  padding: 35px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 15px 0;
+}
+
+.stamp {
+  color: #ff0033;
+  margin-bottom: 10px;
+}

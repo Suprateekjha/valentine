@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Be My Valentine ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+  <!-- Background music (starts after first click) -->
+  <audio id="bgMusic" src="music.mp3" loop></audio>
+
+  <!-- ================= LOADING SCREEN ================= -->
+  <section id="loading" class="screen active loading-bg">
+    <div class="overlay"></div>
+
+    <div class="loading-container">
+      <div id="heart">❤️</div>
+      <p id="quote">Initializing love...</p>
+
+      <div class="progress-bar">
+        <div id="progress"></div>
+      </div>
+    </div>
+  </section>
+
+<!-- ================= PROPOSAL SCREEN ================= -->
+  <section id="proposal" class="screen loading-bg hidden">
+    <div class="overlay"></div>
+
+        <div class="proposal-container">
+
+    <!-- LEFT : BIG IMAGE CARD -->
+        <div class="proposal-image-card">
+        <img src="collage.png" alt="Our Memories">
+        </div>
+
+    <!-- RIGHT : SMALL TEXT CARD -->
+        <div class="proposal-text-card">
+        <h1 class="fixed-line">
+        My <span id="loveName">love</span>, will you be my Valentine?
+        </h1>
+
+        <p id="subtext" class="dynamic-line">
+        I promise to make you smile ❤️
+        </p>
+
+        <div class="buttons">
+        <button id="yesBtn">YES ❤️</button>
+        <button id="noBtn">NO</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= BILL SCREEN ================= -->
+  <section id="bill" class="screen loading-bg hidden">
+    <div class="overlay"></div>
+
+    <div class="card bill">
+      <h1 class="stamp">CONFIRMED 💖</h1>
+      <img src="your-photo.jpeg" class="photo">
+
+      <p><strong>Date:</strong> Tonight</p>
+      <p><strong>Time:</strong> 12:00 PM</p>
+
+      <ul>
+        <li>Romantic Video Call</li>
+        <li>Unlimited Attention</li>
+        <li>Lifetime CHIJJI</li>
+        <li>Lifelong MAR-PEET</li>
+        <li>Lifetime GYM</li>
+      </ul>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
