@@ -202,13 +202,15 @@ button {
 }
 
 .photo {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  margin: 15px 0;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .stamp {
   color: #ff0033;
   margin-bottom: 10px;
 }
+
